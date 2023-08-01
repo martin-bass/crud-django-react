@@ -164,6 +164,11 @@ CORS_ALLOW_METHODS = (
     "PUT",
 )
 
+CORS_ORIGIN_WHITELIST = [
+    'https://crud-django-react.vercel.app',
+    # Otros dominios permitidos, si los tienes.
+]
+
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 }
