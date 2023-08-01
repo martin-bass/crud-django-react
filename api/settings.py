@@ -39,6 +39,9 @@ if RENDER_EXTERNAL_HOSTNAME:
 
 # Application definition
 
+CORS_ORIGIN_ALLOW_ALL=True
+
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,10 +56,10 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -82,8 +85,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'api.wsgi.application'
-
+#WSGI_APPLICATION = 'api.wsgi.application'
+WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -144,8 +147,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # cors autorizacion
 CORS_ALLOWED_ORIGINS = [
     'https://crud-django-react.vercel.app',
-    #'https://crud-django-react.onrender.com',
-    'http://localhost:5173/'
+    'https://crud-django-react.onrender.com',
     ]
 
 REST_FRAMEWORK = {
