@@ -39,7 +39,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 
 # Application definition
 
-CORS_ORIGIN_ALLOW_ALL="*"
+CORS_ORIGIN_ALLOW_ALL=True
 
 
 INSTALLED_APPS = [
@@ -85,8 +85,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'api.wsgi.application'
-
+#WSGI_APPLICATION = 'api.wsgi.application'
+WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -147,7 +147,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # cors autorizacion
 CORS_ALLOWED_ORIGINS = [
     'https://crud-django-react.vercel.app',
-    'https://crud-django-react.onrender.com',
+    'https://crud-django-react.onrender.com/posts/api/v1/posts/',
     ]
 
 REST_FRAMEWORK = {
