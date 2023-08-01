@@ -143,8 +143,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # cors autorizacion
 CORS_ALLOWED_ORIGINS = [
-    #'http://localhost:5173',
-    'https://crud-django-react.vercel.app'
+    'https://crud-django-react.vercel.app',
     ]
 
 REST_FRAMEWORK = {
