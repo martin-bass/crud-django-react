@@ -56,8 +56,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.common.CommonMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -149,6 +149,22 @@ CORS_ALLOWED_ORIGINS = [
     'http://crud-django-react.vercel.app',
     'http://localhost:5173'
     ]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+r"^https://\w+\.domain\.com$",
+]
+
+CORS_ALLOW_HEADERS = [
+'accept',
+'accept-encoding',
+'authorization',
+'content-type',
+'dnt',
+'origin',
+'user-agent',
+'x-csrftoken',
+'x-requested-with',
+]
 
 
 REST_FRAMEWORK = {
