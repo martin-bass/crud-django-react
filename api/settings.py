@@ -85,8 +85,8 @@ TEMPLATES = [
     },
 ]
 
-#WSGI_APPLICATION = 'api.wsgi.application'
-WSGI_APPLICATION = 'vercel_app.wsgi.app'
+WSGI_APPLICATION = 'api.wsgi.application'
+#WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -146,28 +146,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # cors autorizacion
 CORS_ALLOWED_ORIGINS = [
-    'https://crud-django-react.vercel.app/'
-    #'https://crud-django-react.onrender.com',
-    'http://localhost:5173/'
+    'http://crud-django-react.vercel.app',
+    'http://localhost:5173'
     ]
 
-CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https://\w+\.example\.com$",
-]
-
-CORS_ALLOW_METHODS = (
-    "DELETE",
-    "GET",
-    "OPTIONS",
-    "PATCH",
-    "POST",
-    "PUT",
-)
-
-CORS_ORIGIN_WHITELIST = [
-    'https://crud-django-react.vercel.app',
-    # Otros dominios permitidos, si los tienes.
-]
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
