@@ -152,7 +152,8 @@ CORS_ORIGIN_WHITELIST = (
 # cors autorizacion
 CORS_ALLOWED_ORIGINS = [
     'https://crud-django-react.vercel.app',
-    'http://localhost:5173'
+    'http://localhost:5173',
+    'http://localhost:3000/'
     ]
 CORS_ALLOW_ALL_ORIGINS = True
 
