@@ -2,8 +2,8 @@ import axios from "axios";
 import { Post } from "./types";
 
 const postApi = axios.create({
-  baseURL: "http://127.0.0.1:8000/posts/api/v1/posts/",
-  //baseURL: "https://crud-django-react.onrender.com/posts/api/v1/posts/",
+  //baseURL: "http://127.0.0.1:8000/posts/api/v1/posts/",
+  baseURL: "https://crudapi-drf.onrender.com/posts/api/v1/posts/",
 });
 
 export const getAllPosts = () => {
