@@ -4,7 +4,8 @@ import { Post } from "./types";
 //API URL
 const postApi = axios.create({
   //baseURL: "http://127.0.0.1:8000/posts/api/v1/posts/",
-  baseURL: "https://crudapi-drf.onrender.com/posts/api/v1/posts/",
+  //baseURL: "https://crudapi-drf.onrender.com/posts/api/v1/posts/",
+  baseURL:'https://crud-django-react-server.vercel.app/posts/api/v1/posts/'
 });
 
 export const getAllPosts = () => {
