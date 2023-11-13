@@ -91,7 +91,12 @@ DATABASES = {
     #     conn_max_age=600
     # )
     'default': {
-        "POSTGRES_URL": "postgres://:@ep-black-grass-69749799.us-east-1.postgres.vercel-storage.com:5432/verceldb"
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': 'BSNG6WQ1pTHf',
+        'HOST': 'ep-black-grass-69749799.us-east-1.postgres.vercel-storage.com',
+        'PORT': '5432',
     }
 }
 
