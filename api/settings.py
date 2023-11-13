@@ -86,10 +86,13 @@ WSGI_APPLICATION = 'api.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default='sqlite:///db.sqlite3',
-        conn_max_age=600
-    )
+    # 'default': dj_database_url.config(
+    #     default='sqlite:///db.sqlite3',
+    #     conn_max_age=600
+    # )
+    'default': {
+        "POSTGRES_URL": "postgres://:@ep-black-grass-69749799.us-east-1.postgres.vercel-storage.com:5432/verceldb"
+    }
 }
 
 # Password validation
