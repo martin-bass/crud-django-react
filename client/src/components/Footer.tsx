@@ -16,6 +16,8 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 export default function Footer() {
   const { colorMode } = useColorMode();
 
+  const anioActual: number = new Date().getFullYear();
+
   return (
     <Box
       bg={colorMode === "light" ? "gray.700" : "blackAlpha.800"}
@@ -31,7 +33,7 @@ export default function Footer() {
         align={{ base: "center", md: "center" }}
       >
         <Box w={"auto"}>
-          <Text>© 2023 Developed by Martín Lopez</Text>
+          <Text>© {anioActual} Developed by Martín Lopez</Text>
         </Box>
         <HStack spacing={3}>
           <Link href="https://github.com/martin-bass" isExternal>
