@@ -27,8 +27,8 @@ function PostList() {
     const LoadPosts = async () => {
       const res = await getAllPosts();
       setPosts(res.data);
+      setLoading(!loading);
     };
-    setLoading(true);
     LoadPosts();
   }, []);
 
